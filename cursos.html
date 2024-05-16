@@ -5,52 +5,89 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+    <link href="css/estilo.css" rel="stylesheet">
 </head>
 <body>
     <div>
-        <a href='cursos.html'>CURSOS</a>
-           
-        <a href='turmas.html'>TURMAS</a>
-     
-        <a href='alunos.html'>ALUNOS</a>
-       
-        <a href='professores.html'>PROFESSORES</a>
-     </div> 
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                
+                <a href="index.html" class="navbar-brand">
+                    SISTEMA ONLINE
+                </a>
+                
+                <button class="navbar-toggler"
+                data-bs-target="#menu"
+                data-bs-toggle="collapse"
+                aria-controls="menu"
+                aria-expanded="false" 
+                aria-label='Nosso menu'>
+
+                <span class="navbar-toggler-icon"></span>
+
+                </button>
+                
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a  class="nav-link" href='cursos.html'class="">CURSOS</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href='turmas.html'class="">TURMAS</a>
+                        </li>
+                        
+                        <li class="nav-item" >
+                            <a class="nav-link" href='alunos.html'class="">ALUNOS</a>
+                        </li class="nav-item">
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href='professores.html'class="">PROFESSORES</a>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
     
     <form method="post">
-        <table>
-            <thead>
-                <tr>
-                    <th>NOME</th>
-                    <th>VALOR</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>PYTHON</td>
-                    <td>R$300,00</td>
-                    <td><input type="button" value="ALTERAR"> <input type="button" value="EXCLUIR"></td>     
-                </tr>
-    
-                <tr>
-                    <td>EXCEL</td>
-                    <td>R$250,00</td>
-                    <td><input type="button" value="ALTERAR"> <input type="button" value="EXCLUIR"></td>
-                </tr>
-    
-                <tr>
-                    <td>CSS</td>
-                    <td>R$300,00</td>
-                    <td><input type="button" value="ALTERAR"> <input type="button" value="EXCLUIR"></td>
-                </tr>
-    
-            </tbody>
-        </table>
-       
-        
-            
-      
-        <a href="index.html"> VOLTAR </a>
-        <a href="formulario_cursos.html"> NOVO CURSO </a>
+        <div class="container">
+            <table class="table table-striped">
+                
+                <thead>
+                    <tr>
+                        <th>NOME</th>
+                        <th>VALOR</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                
+                <tbody >
+                    <tr>
+                        <td>PYTHON</td>
+                        <td>R$300,00</td>
+                        <td><input type="button" value="ALTERAR" class="btn btn-secondary"> <input type="button" value="EXCLUIR" class="btn btn-danger"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>EXCEL</td>
+                        <td>R$250,00</td>
+                        <td><input type="button" value="ALTERAR" class="btn btn-secondary"> <input type="button" value="EXCLUIR" class="btn btn-danger" ></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>CSS</td>
+                        <td>R$300,00</td>
+                        <td><input type="button" value="ALTERAR" class="btn btn-secondary"> <input type="button" value="EXCLUIR" class="btn btn-danger"></td>
+                    </tr> 
+                </tbody>
+            </table>
+        </div>
+<a href="index.html" class="btn btn-info"> VOLTAR </a>
+<a href="formulario_cursos.html" class="btn btn-info"> NOVO CURSO </a> 
+
 </body>
+<script src="js/bootstrap.js"></script>
 </html>
