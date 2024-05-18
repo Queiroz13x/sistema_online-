@@ -51,6 +51,42 @@
     </nav>
 </div>
 
+<div class="modal" id="mensagem">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Excluir Curso</h5>
+                
+            <button 
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Fechar" 
+                onclick="fechar()">
+            </button>
+        </div>
+        
+        <div class="modal-body">
+            <p>Deseja excluir esse registro?</p>
+        </div>
+        
+        <div class="modal-footer">          
+
+            <button type="button"
+            class="btn btn-secondary"
+            onclick="excluir()">SIM
+        </button>
+
+        <button type="button"
+            class="btn btn-secondary"
+            onclick="fechar()">NÃO
+        </button>
+
+    </div>
+</div>
+</div>
+</div>
+
     
     <form method="post">
         <div class="container">
@@ -68,19 +104,19 @@
                     <tr>
                         <td>PYTHON</td>
                         <td>R$300,00</td>
-                        <td><input type="button" value="ALTERAR" class="btn btn-secondary"> <input type="button" value="EXCLUIR" class="btn btn-danger"></td>
+                        <td><input type="button" value="ALTERAR" class="btn btn-secondary"> <input type="button" value="EXCLUIR" class="btn btn-danger" onclick="abrirTela()"></td>
                     </tr>
                     
                     <tr>
                         <td>EXCEL</td>
                         <td>R$250,00</td>
-                        <td><input type="button" value="ALTERAR" class="btn btn-secondary"> <input type="button" value="EXCLUIR" class="btn btn-danger" ></td>
+                        <td><input type="button" value="ALTERAR" class="btn btn-secondary"> <input type="button" value="EXCLUIR" class="btn btn-danger" onclick="abrirTela()"></td>
                     </tr>
                     
                     <tr>
                         <td>CSS</td>
                         <td>R$300,00</td>
-                        <td><input type="button" value="ALTERAR" class="btn btn-secondary"> <input type="button" value="EXCLUIR" class="btn btn-danger"></td>
+                        <td><input type="button" value="ALTERAR" class="btn btn-secondary"> <input type="button" value="EXCLUIR" class="btn btn-danger" onclick="abrirTela()"></td>
                     </tr> 
                 </tbody>
             </table>
@@ -89,5 +125,27 @@
 <a href="formulario_cursos.html" class="btn btn-info"> NOVO CURSO </a> 
 
 </body>
+
+<script>
+
+    function abrirTela(){
+        let tela = document.getElementById("mensagem");
+        tela.style.display="block";
+      
+    }
+    function excluir(){
+        alert('EXCLUIDO')
+        fechar()
+    }
+    function fechar(){
+        let tela = document.getElementById("mensagem");
+        tela.style.display="none";
+       
+    }
+ 
+    
+    </script>
+   
+    
 <script src="js/bootstrap.js"></script>
 </html>
